@@ -1,0 +1,109 @@
+
+.chatbot-container {
+    position: fixed;
+    bottom: 1.1rem;
+    right: 1.1rem;
+    z-index: 999;
+  }
+  
+  .chatbot-button {
+    background-color: rgb(255,139,22);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 0.7rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .chat-panel {
+    width: 19rem;
+    height: 25rem;
+    background-color: #363636;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+.chat-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: rgb(255,139,22);
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-title {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chatbot-button-X {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+}
+  
+  .chat-messages {
+    flex: 1;
+    padding: 0.6rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  
+  .user-message {
+    background-color: rgb(255,139,22);
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px 15px 0 15px;
+    align-self: flex-end;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  .bot-message {
+    background-color: rgb(206, 206, 206);
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 15px 15px 15px 0;
+    align-self: flex-start;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  .chat-input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .chat-input {
+    flex: 1;
+    padding: 8px;
+    background-color: rgb(206, 206, 206);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+
+  .send-button {
+    background-color: rgb(255,139,22);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  

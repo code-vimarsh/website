@@ -8,6 +8,7 @@ import HashLoader from "react-spinners/HashLoader.js";
 import useUser from "../../store/userContext.js";
 import ToastComponent from "../Toast/toastComponent.js";
 import Myfooter from "../Footer/Myfooter.js";
+import Chatbot from "../ChatBot/ChatBot.js";
 
 function UserProfile() {
 
@@ -97,6 +98,7 @@ function UserProfile() {
     <>
       {toastVisible ? <ToastComponent message={toastMessage} type={toastType} /> : null}
       <Navbar_after_login imgData={base64Img} />
+      <Chatbot />
       <div className="userProfile">
         <div className="searchBarDiv">
           <input id='searchUser' type="text" placeholder="search username"></input>

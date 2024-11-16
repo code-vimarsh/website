@@ -6,6 +6,7 @@ import Res_data from "./Res_data.js";
 import useUser from "../../store/userContext.js";
 import ResourceCardSkeleton from "./ResourceCardSkeleton.js";
 import Myfooter from "../Footer/Myfooter.js";
+import Chatbot from "../ChatBot/ChatBot.js";
 
 export default function Resources() {
   const { user, setUser } = useUser();
@@ -92,6 +93,7 @@ export default function Resources() {
 
   return (
     <>
+      <Chatbot />
       <Navbar_after_login imgData={base64Img} />
       <div>
         <nav className="navbar">

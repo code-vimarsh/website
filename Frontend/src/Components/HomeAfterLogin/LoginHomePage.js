@@ -11,6 +11,7 @@ import HashLoader from "react-spinners/HashLoader.js";
 import PhotoGallery from "../PhotoGallery/PhotoGallery.js"
 import Myfooter from "../Footer/Myfooter.js";
 import Quote from "../Quotes/Quote.js";
+import Chatbot from "../ChatBot/ChatBot.js";
 
 function LoginHomePage() {
   // const navigate = useNavigate()
@@ -105,6 +106,7 @@ function LoginHomePage() {
       </>
     ) : (
       <>
+      <Chatbot />
       <Navbar_after_login imgData={base64Img} />
       <div className="background-color-LoginHome">
         <Greeting fname={fname} userID={userID} isAdmin={admin} />

@@ -8,6 +8,7 @@ import { Link,useNavigate , useLocation } from 'react-router-dom';
 import useUser from '../../store/userContext.js';
 import ToastComponent from '../Toast/toastComponent.js';
 import Myfooter from '../Footer/Myfooter.js';
+import Chatbot from '../ChatBot/ChatBot.js';
 
 function ResourcesContent() {
     const navigate = useNavigate();
@@ -154,6 +155,8 @@ function ResourcesContent() {
         <>
             {toastVisible ? <ToastComponent message={toastMessage} type={toastType} /> : null}
             <Navbar_after_login imgData = {imgData}/>
+            <Chatbot />
+            
             <div className="ResourcesContentFrame">
                 <div className="ResourcesContentTopic">Resources for {subject}</div>
                 <div className="ResourcesContentMain">
