@@ -35,7 +35,9 @@ const Chatbot = () => {
       const data = await response.json();
       const URL = data.result
       
-      if( !(""+URL).startsWith("http")){
+      console.log(URL)
+
+      if( ((""+URL).startsWith("http"))){
         if(URL === 'https://mail.google.com/mail/u/0/?to=codingclub-cse@msubaroda.ac.in&fs=1&tf=cm'){
           window.open(URL, "_blank");
         }
