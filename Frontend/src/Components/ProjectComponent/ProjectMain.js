@@ -9,6 +9,7 @@ import ToastComponent from "../Toast/toastComponent.js";
 import ProjectSkeleton from "./ProjectSkeleton.js";
 import SearchBar from "../SearchBox/SearchBar.js";
 import Myfooter from "../Footer/Myfooter.js";
+import Chatbot from "../ChatBot/ChatBot.js";
 
 export default function ProjectMain() {
   const { user, setUser } = useUser();
@@ -106,6 +107,7 @@ export default function ProjectMain() {
         <ToastComponent message={toastMessage} type={toastType} />
       ) : null}
 
+      <Chatbot />
       <Navbar_after_login imgData={base64Img} />
 
       <div className="projectsContainer">

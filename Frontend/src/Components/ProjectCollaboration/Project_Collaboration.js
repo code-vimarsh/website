@@ -7,6 +7,7 @@ import ToastComponent from '../Toast/toastComponent.js';
 import useUser from '../../store/userContext.js';
 import ProjectCollaborationCardSkeleton from './ProjectCollaborationCardSkeleton.js';
 import Myfooter from '../Footer/Myfooter.js';
+import Chatbot from '../ChatBot/ChatBot.js';
 
 function Project_Collaboration() {
   const { user, setUser } = useUser();
@@ -120,7 +121,7 @@ function Project_Collaboration() {
   return (
     <>
       {toastVisible ? <ToastComponent message={toastMessage} type={toastType} /> : null}
-
+      <Chatbot />
       <Navbar_after_login imgData={base64Img} />
       <div className='projectCollaborationContainer'>
         <div className='projectCollaborationHeader'>
@@ -152,7 +153,6 @@ function Project_Collaboration() {
         }
 
       </div>
-
       <Myfooter />
     </>
   )

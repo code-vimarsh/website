@@ -8,6 +8,7 @@ import Navbar_after_login from "../NavbarAfterLogin/Navbar_after_login.js";
 import HashLoader from "react-spinners/HashLoader.js";
 import useUser from "../../store/userContext.js";
 import Myfooter from "../Footer/Myfooter.js";
+import Chatbot from "../ChatBot/ChatBot.js";
 
 export default function Contest_main() {
 
@@ -74,6 +75,7 @@ export default function Contest_main() {
     return (
 
         <>
+        <Chatbot />
         <div className="contest_main">
             
             <Navbar_after_login imgData={base64Img} />

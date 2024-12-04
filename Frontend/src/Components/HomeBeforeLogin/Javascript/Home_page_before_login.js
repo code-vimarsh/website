@@ -6,6 +6,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import "../../../App.css";
 import useUser from "../../../store/userContext.js";
 import HashLoader from "react-spinners/HashLoader.js";
+import Chatbot from "../../ChatBot/ChatBot.js";
 
 // const Navbar_before_login = lazy(() => import("./Navbar_before_login.js"))
 import Navbar_before_login from "./Navbar_before_login.js";
@@ -85,6 +86,7 @@ function Home_page_before_login() {
 
   return(
     <>
+      <Chatbot />
       <Navbar_before_login />
       <div style={{ display: "flex" }}>
         <div className="welcomeContainer">

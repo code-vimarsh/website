@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import ForumGenerator from './ForumGenerator.js'
 import useUser from '../../store/userContext.js';
 import Myfooter from '../Footer/Myfooter.js';
+import Chatbot from '../ChatBot/ChatBot.js';
 
 export default function Forums() {
   const { user, setUser } = useUser();
@@ -32,7 +33,7 @@ export default function Forums() {
       
       <ForumGenerator />
     </div>
-    
+    <Chatbot />
     <Myfooter />
   </>
   )
