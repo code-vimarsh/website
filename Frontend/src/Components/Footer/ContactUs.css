@@ -1,0 +1,45 @@
+.contactUsForm {
+    color: rgb(234, 234, 234);
+    background-color: rgb(30, 30, 31);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.contactUsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 1.5% 6%; */
+    padding-bottom: 2%;
+    width: 30%;
+    gap: 1rem;
+}
+
+.contactTitle {
+    font-size: 1.45rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nameContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactLabelInput {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+  
+.contactInputField {
+    color: rgb(234, 234, 234);;
+    background-color: rgb(49, 49, 49);
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 1px whitesmoke;
+    padding: 0.15rem 0.4rem;
+}

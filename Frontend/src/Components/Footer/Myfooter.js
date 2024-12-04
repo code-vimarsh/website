@@ -3,6 +3,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
 import './Myfooter.css';
 import useUser from "../../store/userContext";
+import ContactUs from "./ContactUs";
 
 export default function Myfooter() {
     const { user, setUser } = useUser();
@@ -55,7 +56,7 @@ export default function Myfooter() {
 
                 <ul>
                     <li> <ScrollLink to="AboutUS" smooth={true} offset={-90} href="#"> About Us </ScrollLink> </li>
-                    <li><a href="https://mail.google.com/mail/?view=cm&to=codingclub-cse@msubaroda.ac.in" target="_blank" >Contact Us</a></li>
+                    <li> <ScrollLink to="ContactUs" smooth={true} offset={0} href="#"> Contact Us </ScrollLink> </li>
                 </ul>
             </div>
             <div className="box UL">
@@ -66,8 +67,9 @@ export default function Myfooter() {
                 </ul>
             </div>
         </footer>
+        <ContactUs />
         <div className="copyright" id="terms_&_policy">
-            <p>Copyright © {date.getFullYear()} CodeMinions-Coding Club Website. All Rights Reserved</p>
+            <p>Copyright © {date.getFullYear()} CodeVimarsh-Coding Club Website. All Rights Reserved.</p>
         </div>
         </>
     );
