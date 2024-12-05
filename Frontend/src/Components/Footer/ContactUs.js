@@ -32,11 +32,24 @@ const ContactUs = () => {
                 "Content-Type": "application/json"
             }
         })
-        if(response.ok) {
+        const data = await response.json();
+        if(response.status == 200) {
             setToastVisible(true);
-            setToastMessage("End Date can't be before Start Date");
-            setToastType("warning");
-            setTimeout(() => setToastVisible(false), 4000);
+            setToastMessage(data.message);
+            setToastType("success");
+            setTimeout(() => setToastVisible(false), 3000);
+
+            emailIdRef.current.value = "";
+            firstnameRef.current.value = "";
+            lastnameRef.current.value = "";
+            subjectRef.current.value = "";
+            messageRef.current.value = "";
+        }
+        else {
+            setToastVisible(true);
+            setToastMessage("Sorry! Something went wrong...!");
+            setToastType("error");
+            setTimeout(() => setToastVisible(false), 3000);
         }
     }
 

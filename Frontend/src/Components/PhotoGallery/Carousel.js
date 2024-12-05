@@ -8,7 +8,7 @@ const Carousel = () => {
     <div className="carousel">
       <div className="image-grid">
         {imageData.map((item, index) => (
-          <ImageCard key={index} url={item.url} text={item.text} />
+          <ImageCard key={index} url={item.url} text={item.text} date={item.date} />
         ))}
       </div>
     </div>

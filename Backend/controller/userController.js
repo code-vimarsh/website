@@ -3,8 +3,16 @@ const Project = require('../models/project.js')
 const bcrypt = require("bcryptjs");
 const path = require("path");
 const jwt = require('jsonwebtoken')
+const nodemailer = require("nodemailer");
+const { google } = require("googleapis");
 const generateAuthToken = require('../utils/generateTokens.js');
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
+
+const CLIENT_ID = process.env.REACT_APP_GOOGLE_OAUTH2_CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_GOOGLE_OAUTH2_CLIENT_SECRET;
+const REDIRECT_URI = process.env.REACT_APP_GOOGLE_OAUTH2_REDIRECT_URI;
+const REFRESH_TOKEN = process.env.REACT_APP_GOOGLE_OAUTH2_REFRESH_TOKEN;
+
 
 exports.getProfile = async (req,res) => {
     const userID = req.query.userID;
@@ -283,6 +291,43 @@ exports.signIn = async (req, res) => {
         res.status(400).send({message: "ERROR: "+err})
     }
 }
+
+exports.sendFeedBack = async (req, res) => {
+  try {
+    const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
+    oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+
+    const accessToken = await oAuth2Client.getAccessToken();
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        type: "OAuth2",
+        user: "codingclub-cse@msubaroda.ac.in",
+        clientId: CLIENT_ID,
+        clientSecret: CLIENT_SECRET,
+        refreshToken: REFRESH_TOKEN,
+        accessToken: accessToken.token
+      },
+    });
+
+    const mailOptions = {
+      from: req.body.emailId,
+      to: "codingclub-cse@msubaroda.ac.in",
+      subject: req.body.subject,
+      text: `Hello, CodeVimarsh Team. I am ${req.body.firstname} ${req.body.lastname}.
+
+${req.body.message}`,
+      replyTo: req.body.emailId
+    };
+
+    const result = await transporter.sendMail(mailOptions);
+    res.status(200).send({message: "Email sent successfully!"});
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+}
+
 
 // exports.profileImg = async(req,res) => {
 //   // const jwt = req.cookies.jwtAuth;

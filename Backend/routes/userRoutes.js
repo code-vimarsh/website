@@ -17,6 +17,7 @@ router.get('/home/dataset',authenticate,userController.homeDataset);
 router.get("/remove/auth", userController.removeUserAuth);
 router.post("/signup",password,userController.signUp);
 router.post("/signin",userController.signIn);
+router.post('/sendFeedback',userController.sendFeedBack);
 // router.get("/profileImg",authenticate,userController.profileImg);
 
 module.exports = router;
