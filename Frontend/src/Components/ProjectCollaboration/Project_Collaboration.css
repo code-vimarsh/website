@@ -52,7 +52,8 @@
     text-align: center;
     top: 10vh;
     left: 0.5rem;
-    font-size: 4.8vh;
+    font-size: 2.32rem;
+    /* font-size: 4.8vh; */
     letter-spacing: 1px;
     color: rgb(255, 255, 255);
     font-family: projectCollaborationFont;

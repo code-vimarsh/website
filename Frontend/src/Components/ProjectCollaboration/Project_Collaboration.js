@@ -73,7 +73,7 @@ function Project_Collaboration() {
         }
       })
       const data = await response.json();
-      setCollaborationData(data[0]);
+      setCollaborationData(data[0].reverse());
       // setArray(data[1]);
       const dataMap = new Map(data[1]);
       setMap(dataMap);

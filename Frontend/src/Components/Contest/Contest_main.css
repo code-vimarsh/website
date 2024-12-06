@@ -3,25 +3,16 @@
     src: url("/public/fonts/Cyborg\ Punk.ttf");
 }
 
-.contest_main{
-   
-}
-
 .upcomingContestGrid{
     display: grid;
-    
     margin: 1% 4.5% 4% 4.3%;
-    gap: 0px 3%;
+    gap: 2rem 3rem;
     grid-template-columns: repeat(2,1fr);
 }
 
 .upcoming_contest{
     padding-top: 3%;
     margin: 0% 4.4%;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Courier New', Courier, monospace;
-   
 }
 
 .upcoming_contest p{
@@ -36,8 +27,7 @@
 
 .RunningContestGrid {
     display: grid;
- 
-    gap: 2.5rem 2.5rem;
+    gap: 2rem 3rem;
     grid-template-columns: repeat(2, 1fr);
     margin: 1% 4.5% 4% 4.3%;
 }
@@ -72,8 +62,7 @@
 
 .PastContestGrid {
     display: grid;
-    
-    gap: 4.5vh 4.5vh;
+    gap: 2rem 3rem;
     grid-template-columns: repeat(2, 1.5fr);
     margin: 1% 4.5% 5.5% 4.3%;
 }
@@ -109,13 +98,14 @@
     height: fit-content;
     width: fit-content;
     top: 7.5rem;
-    right: 2rem;
+    right: 4.15rem;
     font-size: 0.9rem;
     color: white;
     letter-spacing: 1px;
     padding: 1.1vh 1.4vw;
     background-color: rgb(253, 138, 22);
     border-radius: 10px;
+    z-index: 1;
 }
 
 .AddContestBtn:hover{   

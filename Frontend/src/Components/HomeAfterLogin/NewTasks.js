@@ -8,16 +8,16 @@ function NewTasks(props) {
     <div>
       {
         props.contests.length!=0?
-        <>
-        <div className='recentHeading'>
-        <h1>Test your Coding Skills</h1>
-          <Link to={`/contest/?userID=${props.userID}`}>
-            <button className='recentHeadingButton'>View More</button>
-          </Link>
-        </div>
+        <div className='recentHeading-container'>
+            <div className='recentHeading'>
+            <h1>Test your Coding Skills</h1>
+              <Link to={`/contest/?userID=${props.userID}`}>
+                <button className='recentHeadingButton'>View More</button>
+              </Link>
+            </div>
 
-        <RecentTasksPanel contests={props.contests}/>
-        </>
+            <RecentTasksPanel contests={props.contests}/>
+        </div>
       :
       null}
       

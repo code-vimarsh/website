@@ -130,6 +130,10 @@
     margin-bottom: 2vh;
 }
 
+.contact_lessbtn {
+    margin-top: 0.8rem;
+}
+
 .project_collab_btn {
     float: right;
     /* height: 4.5vh; */

@@ -12,15 +12,24 @@
     font-family: myFont;
 }
 
+.recentHeading-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
 .recentHeading{
     display: flex;
     align-items: center;
     position: relative;
     flex-direction: row;
     justify-content: space-between;
-    width: 95%;
-    margin-right: 5vh;
-    margin-bottom: 3%;
+    width: 90%;
+    /* margin-right: 5vh; */
+    margin-bottom: 2%;
 }
 
 .recentHeading a{

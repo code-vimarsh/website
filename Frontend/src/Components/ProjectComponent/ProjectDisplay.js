@@ -144,7 +144,7 @@ function ProjectDisplay(props) {
                     </div>
                     <div>
                         <h2>Project Information :</h2>
-                        <p className="projectinfo">{props.data.projectInfo}</p>
+                        <pre className="projectinfo">{props.data.projectInfo}</pre>
                     </div>
                     <div className="teaminfo">
                         <h2>Team Member</h2>
