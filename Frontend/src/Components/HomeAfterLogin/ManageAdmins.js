@@ -3,6 +3,7 @@ import "./ManageAdmins.css";
 import { Link, useNavigate } from 'react-router-dom';
 import ToastComponent from '../Toast/toastComponent';
 import useUser from '../../store/userContext';
+import ManageAdminSkeleton from './ManageAdminSkeleton';
 
 function ManageAdmins() {
     const navigate = useNavigate();
@@ -122,8 +123,7 @@ function ManageAdmins() {
                             <div className='manageAdminsBodyRowHeader'></div>
                         </div>
                         <div className='manageAdminsList'>
-                            {adminList.map(listAdmins)}
-
+                            {adminList ? <ManageAdminSkeleton /> : <>{adminList.map(listAdmins)}</>}
                         </div>
 
                         <div className='addAdminTitle'>Register New Admin</div>

@@ -4,7 +4,7 @@ import { Bot, X, Send } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Chatbot = () => {
-  const startingMessage = {text: "Hello, I am here to help you with any queries regarding the usage of this website..!!", isUser: false, timeOfMsg: new Date()}
+  const startingMessage = {text: "Hello, I am here to help you with any queries regarding the usage of this website.", isUser: false, timeOfMsg: new Date()}
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([startingMessage]);
   const [input, setInput] = useState('');
